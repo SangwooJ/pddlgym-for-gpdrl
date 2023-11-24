@@ -169,6 +169,9 @@ for env_name, kwargs in [
         ("visit_all", {'render' : visit_all_render,
                        'operators_as_actions': True,
                        'dynamic_action_space': True}),
+
+        ("droneworld_scan", {'operators_as_actions' : True,
+                  'dynamic_action_space' : True,}),
 ]:
     other_args = {
         "raise_error_on_invalid_action": False,
