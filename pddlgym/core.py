@@ -586,3 +586,13 @@ class PDDLEnv(gym.Env):
             else:  # terminate
                 break
         return state
+    
+    # swj : reload problem to reflect new problems
+    def reload_problems_from_file(self):
+        problems = []
+        problem_files = [f for f in glob.glob(os.path.join(self._problem_dir, "*.pddl"))]
+        for problem_file in sorted(problem_files):
+            problem = PDDLProblemParser(problem_file, self.domain.domain_name, 
+                self.domain.types, self.domain.predicates, self.domain.actions, self.domain.constants)
+            problems.append(problem)
+        self.problems = problems

@@ -24,9 +24,9 @@
 		pos-4-4 - position
 	)
 	(:init
-		(at drone pos-1-4)
+		(at drone pos-2-1)
 		(drone-to south)
-;		(threat-at pos-2-3)
+;		(threat-at pos-3-2)
 		(at target-1 pos-2-2)
 		(safe-at pos-1-1)
 		(safe-at pos-1-2)
@@ -34,9 +34,9 @@
 		(safe-at pos-1-4)
 		(safe-at pos-2-1)
 		(safe-at pos-2-2)
+		(safe-at pos-2-3)
 		(safe-at pos-2-4)
 		(safe-at pos-3-1)
-		(safe-at pos-3-2)
 		(safe-at pos-3-3)
 		(safe-at pos-3-4)
 		(safe-at pos-4-1)
@@ -93,7 +93,7 @@
 		(adjacent-west pos-4-4 pos-3-4)
 	)
 	(:goal (and
-		(at drone pos-3-3)
+		(at drone pos-3-4)
 		(scanned target-1)
 	)
 	))
